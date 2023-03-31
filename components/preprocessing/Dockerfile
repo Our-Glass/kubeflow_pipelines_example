@@ -1,0 +1,24 @@
+FROM python:3.7-slim-stretch
+
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update && \
+    apt-get -y install gcc mono-mcs g++ git curl && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN mkdir /app
+WORKDIR /app
+
+
+
+ADD requirements.txt /app/requirements.txt
+RUN pip3 install -r requirements.txt
+
+RUN spacy download en_core_web_lg
+
+ADD preprocessing.py /app/preprocessing.py
+RUN chmod +x /app/preprocessing.py
+
+
+
+ENTRYPOINT ["python"]
+CMD ["/app/preprocessing.py"]

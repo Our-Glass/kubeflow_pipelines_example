@@ -1,0 +1,6 @@
+comment_text,sentiment,subjectivity,ner,tag
+Aww so adorable sing,Positive,Highly Opinionated sentence,[],[]
+Aw with Jimins Serendipity playing in the background❤️💕💫,Neutral,Less Opinionated sentence,"[('Jimins Serendipity', 'ORG')]",[]
+Sir aapki smile bhaut pyari Hai. Sabhi video me apni smile jrur pas rkhna... Plz like my comments,Positive,Less Opinionated sentence,"[('Hai', 'PERSON'), ('Sabhi', 'PERSON')]",[]
+Oh lord Rap line outro tear (live version) Rap line DDAENG (live) RM joke August D. August D RM. Do you Rap line : cyphers 1-4 Rapline : UGH the list is endless 😂😂😂😂,Positive,Highly Opinionated sentence,"[('Rap', 'PERSON'), ('August D. August', 'DATE'), ('Rap', 'PERSON'), ('1', 'CARDINAL'), ('UGH', 'ORG')]",[]
+It's so well made omg,Neutral,Less Opinionated sentence,[],[]
