@@ -1,0 +1,26 @@
+name: Load data
+outputs:
+- {name: X, type: Dataset}
+- name: "y"
+  type: Dataset
+implementation:
+  container:
+    image: mevo12318/load_data_test_custom:v1
+    command:
+    - sh
+    - -c
+    - |2
+
+      if ! [ -x "$(command -v pip)" ]; then
+          python3 -m ensurepip || python3 -m ensurepip --user || apt-get install python3-pip
+      fi
+
+      PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet     --no-warn-script-location 'pandas' 'scikit-learn' && "$0" "$@"
+    - python3
+    - -m
+    - kfp.v2.components.executor_main
+    args:
+    - --executor_input
+    - {executorInput: null}
+    - --function_to_execute
+    - load_data
