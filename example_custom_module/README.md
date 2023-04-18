@@ -4,7 +4,10 @@ This example contains two pipeline:
 
 The example show the principal components of KFP and how create a component with custom python module (reffer to and pipeline_lightweight.py components/load_data.py)
 
+
+
 ## Running lighthweight pipeline
+![img](https://github.com/Our-Glass/kubeflow_pipelines_example/blob/main/example_custom_module/Pipeline.png)
 
 1. Create base image with the custom modules for runing component split_data_light
 ```bash
